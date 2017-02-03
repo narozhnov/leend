@@ -36,6 +36,7 @@
     }
     &__logo--small {
       position: absolute;
+      z-index: 9999;
         width: rem(140);
         margin: rem(3) 0 0;
     }
@@ -65,14 +66,13 @@ CSS styles are at the end! */
   position: relative;
   margin: 0;
   padding: 0;
-  float: right;
+  float: left;
 }
 
 #toggleMenu {
   display: none;
   &:checked ~ ul {
     max-height: 100%;
-    /*Make page height*/
     opacity: 1;
   }
 }
@@ -83,7 +83,7 @@ CSS styles are at the end! */
     margin: 0;
     padding: 0;
     list-style: none;
-    float: right;
+    float: left;
     overflow-y: hidden;
     max-height: 0;
   }
@@ -161,7 +161,7 @@ label.menuTitle {
   font-size: 20px;
   width: 94%;
   /*Use 100% and box-sizing if not supporting ie7*/
-  padding: 15px 3%;
+  padding: 17px 3%;
   font-weight: bold;
 }
 

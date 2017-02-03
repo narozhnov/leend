@@ -3,7 +3,7 @@
     // TYPING TEASER TEXT
 
     $('#showcase-type').typed({
-        strings: ['Best Choice for Your Web App. Premium Quality', 'Ultimate Admin Template for All Your Needs', 'Clean Simple Responsive <br>Easy and Highly Customizable'],
+        strings: [ 'Predict Your Business with <br/> Automated Machine Learning.'],
         typeSpeed: 30,
         loop: true,
         backDelay: 1000,
@@ -43,19 +43,26 @@
     
     $('.cwt__main-menu a').on('click', function(){
         $(this).addClass('cwt__main-menu__link--active');
+        
     });
 
+    $('.cwt__js-click__preview').on('click', function(){
+        $.scrollTo($('.cwt__showcase'), 1000, {offset: -50});
+        $('#toggleMenu').click()
+    });
     $('.cwt__js-click__gallery').on('click', function(){
-        $.scrollTo($('.cwt__gallery'), 1000, {offset: -100});
-        $(this).toggleClass("#toggleMenu");
+        $.scrollTo($('.cwt__gallery'), 1000, {offset: -50});
+        $('#toggleMenu').click()
     });
 
     $('.cwt__js-click__features').on('click', function(){
-        $.scrollTo($('.cwt__features'), 1000, {offset: -100});
+        $.scrollTo($('.cwt__features'), 1000, {offset: -50});
+        $('#toggleMenu').click()
     });
 
     $('.cwt__js-click__about').on('click', function(){
-        $.scrollTo($('.cwt__about'), 1000, {offset: -100});
+        $.scrollTo($('.cwt__about'), 1000, {offset: -50});
+        $('#toggleMenu').click()
     });
 
 
