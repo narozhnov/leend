@@ -1,43 +1,9 @@
 /*
- *  HEADER FIXED BLOCK
- */
-.cwt__header-fixed {
-    padding: 0.625rem 0;
-    background: rgba(255, 255, 255, 0.9);
-    color: #090f25;
-    position: fixed;
-    z-index: 10;
-    top: 0px;
-    left: 0px;
-    border-bottom: 1px solid #e7e7e7;
-    width: 100%;
-}
-
-.cwt__header-fixed__container {
-    padding: 0 7.5rem;
-}
-
-@media (max-width: 991px) {
-    .cwt__header-fixed__container {
-        padding: 0 1.875rem;
-    }
-}
-
-.cwt__main-menu--dark .cwt__main-menu__link {
-    color: #090f25;
-    font-weight: 300 !important;
-}
-
-.cwt__main-menu--dark .cwt__main-menu__link:after {
-    background: rgba(9, 15, 37, 0.3);
-}
-
-.cwt__logo--small {
-    position: absolute;
-    width: 8.75rem;
-    margin: 0.1875rem 0 0;
-}
-
+Responsive Mobile Toggle Menu v2.2
+Description: Mobile first responsive toggle menu
+Author: Danielle Vautier
+*/
+/*Menu mobile first CSS*/
 body {
     -webkit-animation: bugfix infinite 1s;
 }
@@ -55,12 +21,12 @@ body {
 /*Required functional CSS don't change this bit
 CSS styles are at the end! */
 .mainMenu {
-    width: 100%;
     display: block;
     position: relative;
+    width: 100%;
     margin: 0;
     padding: 0;
-    float: right;
+    float: left;
 }
 
 #toggleMenu {
@@ -78,7 +44,7 @@ CSS styles are at the end! */
     margin: 0;
     padding: 0;
     list-style: none;
-    float: right;
+    float: left;
     overflow-y: hidden;
     max-height: 0;
 }
@@ -89,7 +55,7 @@ CSS styles are at the end! */
     white-space: nowrap;
     display: block;
     width: 100%;
-    float: right;
+    float: left;
 }
 
 .mainMenu a {
@@ -108,8 +74,8 @@ label.menuTitle {
     margin: 0;
     display: block;
     cursor: pointer;
-    background: url("../../../img/menu/menu.png");
-    background-image: url("../../../img/menu/menu.svg"), none;
+    background: url("../images/menu.png");
+    background-image: url("../images/menu.svg"), none;
     background-repeat: no-repeat;
     background-position: 97% 10px;
     background-size: 24px 19px;
@@ -134,35 +100,52 @@ label.menuTitle {
 }
 
 /*Menu Styling CSS - change the below to suit your site!*/
-.header-product a {
+.mainMenu {
+    border-bottom: 1px solid #ccc;
     text-align: center;
-    display: inline-block;
-    height: 36px;
-    padding: 0 14px;
-    -webkit-border-radius: 4px;
-            border-radius: 4px;
-    font-size: 14px;
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-    line-height: 38px;
-    color: #333;
-    -webkit-transition-property: all;
-    -o-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: .2s;
-    -o-transition-duration: .2s;
-       transition-duration: .2s;
 }
 
-.header-product a:hover {
-    background-color: #e5e5e5;
+.mainMenu li {
+    border-top: 1px solid #ccc;
+}
+
+.mainMenu a {
+    color: #333;
+    text-decoration: none;
+    width: 94%;
+    /*Use 100% and box-sizing if not supporting ie7*/
+    padding: 5px 3%;
+    background: none;
+}
+
+.mainMenu a:visited {
+    color: #333;
+    text-decoration: none;
+    width: 94%;
+    /*Use 100% and box-sizing if not supporting ie7*/
+    padding: 5px 3%;
+    background: none;
 }
 
 label.menuTitle {
     font-size: 20px;
     width: 94%;
     /*Use 100% and box-sizing if not supporting ie7*/
-    padding: 15px 3%;
+    padding: 6px 3%;
     font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+    .mainMenu li {
+        border: 0;
+    }
+    .mainMenu a {
+        padding: 10px 3px 10px 8px;
+    }
+    .mainMenu a:hover {
+        color: #767676;
+    }
+    .mainMenu a:visited {
+        padding: 10px 3px 10px 8px;
+    }
 }

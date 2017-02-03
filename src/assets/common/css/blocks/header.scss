@@ -27,19 +27,7 @@
         font-size: rem(14);
         color: $black !important;
         position: relative;
-        margin: 0 rem(30) rem(10) 0 !important;
-        &:after {
-            content: '';
-            display: block;
-            position: absolute;
-            bottom: rem(-4);
-            left: 0;
-            width: 0;
-            height: rem(1);
-            background: $black;
-
-            @include transition-2();
-        }
+        
         &:hover, &--active {
             &:after {
                 width: 100%;

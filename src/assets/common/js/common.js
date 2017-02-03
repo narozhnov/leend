@@ -42,16 +42,12 @@
     // MENU SCROLLTO
     
     $('.cwt__main-menu a').on('click', function(){
-        $('.cwt__main-menu a').removeClass('cwt__main-menu__link--active');
         $(this).addClass('cwt__main-menu__link--active');
-    });
-
-    $('.cwt__js-click__preview').on('click', function(){
-        $.scrollTo($('.cwt__preview'), 1000);
     });
 
     $('.cwt__js-click__gallery').on('click', function(){
         $.scrollTo($('.cwt__gallery'), 1000, {offset: -100});
+        $(this).toggleClass("#toggleMenu");
     });
 
     $('.cwt__js-click__features').on('click', function(){

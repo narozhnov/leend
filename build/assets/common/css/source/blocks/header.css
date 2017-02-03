@@ -26,21 +26,6 @@
     font-size: 0.875rem;
     color: #090f25 !important;
     position: relative;
-    margin: 0 1.875rem 0.625rem 0 !important;
-}
-
-.cwt__main-menu__link:after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: -0.25rem;
-    left: 0;
-    width: 0;
-    height: 0.0625rem;
-    background: #090f25;
-    -webkit-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
 }
 
 .cwt__main-menu__link:hover:after, .cwt__main-menu__link--active:after {

@@ -1,45 +1,11 @@
-@import '../mixins';
-
 /*
- *  HEADER FIXED BLOCK
- */
+Responsive Mobile Toggle Menu v2.2
+Description: Mobile first responsive toggle menu
+Author: Danielle Vautier
+*/
 
+/*Menu mobile first CSS*/
 
-.cwt {
-    &__header-fixed {
-        padding: rem(10) 0;
-        background: rgba($white, .9);
-        color: $black;
-        position: fixed;
-        z-index: 10;
-        top: 0px;
-        left: 0px;
-        border-bottom: 1px solid #e7e7e7;
-        width: 100%;
-        &__container {
-            padding: 0 rem(120);
-
-            @media (max-width: $md-max-width) {
-                padding: 0 rem(30);
-            }
-        }
-    }
-
-    &__main-menu--dark {
-        .cwt__main-menu__link {
-            color: $black;
-            font-weight: 300 !important;
-            &:after {
-                background: rgba($black, .3);
-            }
-        }
-    }
-    &__logo--small {
-      position: absolute;
-        width: rem(140);
-        margin: rem(3) 0 0;
-    }
-}
 body {
   -webkit-animation: bugfix infinite 1s;
 }
@@ -60,12 +26,12 @@ body {
 CSS styles are at the end! */
 
 .mainMenu {
-  width: 100%;
   display: block;
   position: relative;
+  width: 100%;
   margin: 0;
   padding: 0;
-  float: right;
+  float: left;
 }
 
 #toggleMenu {
@@ -83,7 +49,7 @@ CSS styles are at the end! */
     margin: 0;
     padding: 0;
     list-style: none;
-    float: right;
+    float: left;
     overflow-y: hidden;
     max-height: 0;
   }
@@ -93,7 +59,7 @@ CSS styles are at the end! */
     white-space: nowrap;
     display: block;
     width: 100%;
-    float: right;
+    float: left;
   }
   a {
     display: block;
@@ -111,8 +77,8 @@ label.menuTitle {
   margin: 0;
   display: block;
   cursor: pointer;
-  background: url('../../../img/menu/menu.png');
-  background-image: url('../../../img/menu/menu.svg'), none;
+  background: url('../images/menu.png');
+  background-image: url('../images/menu.svg'), none;
   background-repeat: no-repeat;
   background-position: 97% 10px;
   background-size: 24px 19px;
@@ -138,30 +104,51 @@ label.menuTitle {
 
 /*Menu Styling CSS - change the below to suit your site!*/
 
-
-.header-product a{
+.mainMenu {
+  border-bottom: 1px solid #ccc;
   text-align: center;
-  display: inline-block;
-    height: 36px;
-    padding: 0 14px;
-    border-radius: 4px;
-    font-size: 14px;
-    box-sizing: border-box;
-    line-height: 38px;
+  li {
+    border-top: 1px solid #ccc;
+  }
+  a {
     color: #333;
-    -webkit-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: .2s;
-    transition-duration: .2s;
+    text-decoration: none;
+    width: 94%;
+    /*Use 100% and box-sizing if not supporting ie7*/
+    padding: 5px 3%;
+    background: none;
+    &:visited {
+      color: #333;
+      text-decoration: none;
+      width: 94%;
+      /*Use 100% and box-sizing if not supporting ie7*/
+      padding: 5px 3%;
+      background: none;
+    }
+  }
 }
-.header-product a:hover {
-    background-color: #e5e5e5;
-}
+
 label.menuTitle {
   font-size: 20px;
   width: 94%;
   /*Use 100% and box-sizing if not supporting ie7*/
-  padding: 15px 3%;
+  padding: 6px 3%;
   font-weight: bold;
 }
 
+@media screen and (min-width: 768px) {
+  .mainMenu {
+    li {
+      border: 0;
+    }
+    a {
+      &:hover {
+        color: #767676;
+      }
+      padding: 10px 3px 10px 8px;
+      &:visited {
+        padding: 10px 3px 10px 8px;
+      }
+    }
+  }
+}
